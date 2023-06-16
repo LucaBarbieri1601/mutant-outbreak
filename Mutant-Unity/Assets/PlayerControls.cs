@@ -43,7 +43,7 @@ public class PlayerControls : MonoBehaviour{
 
     void Look() {
         if (GetWalkDirection() != Vector3.zero){
-            var Position = transform.position;
+            var position = transform.position;
             var relative = (position + GetWalkDirection()) - position;
             var rot = Quaternion.LookRotation(relative, Vector3.up);
             var rotationalFactor = Vector3.Angle(position, relative);
